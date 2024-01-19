@@ -11,6 +11,9 @@ class CreateAccount extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 20,
+              ),
               Text(
                 'Create\nAccount',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
@@ -19,24 +22,6 @@ class CreateAccount extends StatelessWidget {
                 height: 50,
               ),
               // Text('Email'),
-              TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.alternate_email_sharp),
-                    prefixIconColor: Colors.black,
-                    hintText: "Email",
-                    hintStyle: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: .4),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(35))),
-              ),
-              SizedBox(
-                height: 22,
-              ),
               TextField(
                 decoration: InputDecoration(
                     fillColor: Colors.white,
@@ -49,6 +34,24 @@ class CreateAccount extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         letterSpacing: .4),
                     // suffixIcon: Icon(Icons.remove_red_eye),
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(35))),
+              ),
+              SizedBox(
+                height: 22,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    prefixIcon: Icon(Icons.alternate_email_sharp),
+                    prefixIconColor: Colors.black,
+                    hintText: "Email",
+                    hintStyle: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: .4),
                     border: OutlineInputBorder(
                         borderSide: BorderSide.none,
                         borderRadius: BorderRadius.circular(35))),

@@ -14,12 +14,15 @@ class LoginOptions extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 20,
+              ),
               Text(
-                'Log in\n  with',
+                'Log in\n  with', //google font req
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
               ),
               SizedBox(
-                height: 50,
+                height: 200,
               ),
               MaterialButton(
                 onPressed: () {
@@ -51,10 +54,7 @@ class LoginOptions extends StatelessWidget {
                 height: 22,
               ),
               MaterialButton(
-                onPressed: () {
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => LoginPage()));
-                },
+                onPressed: () {},
                 height: 55,
                 minWidth: 350,
                 child: ListTile(
@@ -79,63 +79,56 @@ class LoginOptions extends StatelessWidget {
               SizedBox(
                 height: 22,
               ),
-              MaterialButton(
-                onPressed: () {
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => LoginPage()));
-                },
-                height: 55,
-                minWidth: 350,
-                child: ListTile(
-                  leading: Icon(
-                    Icons.facebook,
-                    color: Colors.black,
-                    size: 23,
-                  ),
-                  title: Text(
-                    "Login with Facebook",
-                    style: TextStyle(
-                        fontSize: 21,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: .5),
-                  ),
-                ),
-                color: Colors.yellow[300],
-                shape: StadiumBorder(),
-                // textColor: Colors.white,
-              ),
-              SizedBox(
-                height: 22,
-              ),
-              MaterialButton(
-                onPressed: () {
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => LoginPage()));
-                },
-                height: 55,
-                minWidth: 350,
-                child: ListTile(
-                  leading: Icon(
-                    Icons.apple,
-                    color: Colors.black,
-                  ),
-                  title: Text(
-                    "Login with Apple",
-                    style: TextStyle(
-                        fontSize: 21,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: .5),
-                  ),
-                ),
-                color: Colors.yellow[300],
-                shape: StadiumBorder(),
-                // textColor: Colors.white,
-              ),
-              SizedBox(
-                height: 22,
-              ),
+              // MaterialButton(
+              //   onPressed: () {},
+              //   height: 55,
+              //   minWidth: 350,
+              //   child: ListTile(
+              //     leading: Icon(
+              //       Icons.facebook,
+              //       color: Colors.black,
+              //       size: 23,
+              //     ),
+              //     title: Text(
+              //       "Login with Facebook",
+              //       style: TextStyle(
+              //           fontSize: 21,
+              //           color: Colors.black,
+              //           fontWeight: FontWeight.w400,
+              //           letterSpacing: .5),
+              //     ),
+              //   ),
+              //   color: Colors.yellow[300],
+              //   shape: StadiumBorder(),
+              //   // textColor: Colors.white,
+              // ),
+              // SizedBox(
+              //   height: 22,
+              // ),
+              // MaterialButton(
+              //   onPressed: () {},
+              //   height: 55,
+              //   minWidth: 350,
+              //   child: ListTile(
+              //     leading: Icon(
+              //       Icons.apple,
+              //       color: Colors.black,
+              //     ),
+              //     title: Text(
+              //       "Login with Apple",
+              //       style: TextStyle(
+              //           fontSize: 21,
+              //           color: Colors.black,
+              //           fontWeight: FontWeight.w400,
+              //           letterSpacing: .5),
+              //     ),
+              //   ),
+              //   color: Colors.yellow[300],
+              //   shape: StadiumBorder(),
+              // ),
+              // SizedBox(
+              //   height: 22,
+              // ),
               RichText(
                   text: TextSpan(
                       style: TextStyle(color: Colors.white),

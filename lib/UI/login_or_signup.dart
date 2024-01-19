@@ -17,7 +17,7 @@ class LoginOrSignup extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'Welcome to\nsBook App',
+              'Welcome to\nsNote App',//nala oru google font add akenm
               style: TextStyle(fontSize: 42),
             ),
             SizedBox(

@@ -13,12 +13,13 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: 20,),
               Text(
                 ' Hello\nAgain!',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
               ),
               SizedBox(
-                height: 50,
+                height: 130,
               ),
               // Text('Email'),
               TextField(
