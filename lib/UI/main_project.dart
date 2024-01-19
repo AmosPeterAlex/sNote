@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_app1/UI/home.dart';
 import 'package:project_app1/UI/login_or_signup.dart';
 
 void main() {
@@ -9,7 +10,7 @@ void main() {
     //     primaryColor: Colors.black,
     //     colorScheme: ColorScheme.dark()),
     theme: ThemeData.dark(),
-    home: LoginOrSignup(),
+    home: HomePage(),
     debugShowCheckedModeBanner: false,
   ));
 }

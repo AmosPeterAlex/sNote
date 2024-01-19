@@ -13,7 +13,9 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Text(
                 ' Hello\nAgain!',
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
@@ -69,7 +71,7 @@ class LoginPage extends StatelessWidget {
                   "Log In",
                   style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
-                color: Colors.yellow[300],
+                color: Color(0xfff5f378),
                 shape: StadiumBorder(),
                 textColor: Colors.white,
               ),

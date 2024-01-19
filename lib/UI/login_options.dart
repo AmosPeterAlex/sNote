@@ -72,63 +72,13 @@ class LoginOptions extends StatelessWidget {
                         letterSpacing: .5),
                   ),
                 ),
-                color: Colors.yellow[300],
+                color: Color(0xfff5f378),
                 shape: StadiumBorder(),
                 // textColor: Colors.white,
               ),
               SizedBox(
                 height: 22,
               ),
-              // MaterialButton(
-              //   onPressed: () {},
-              //   height: 55,
-              //   minWidth: 350,
-              //   child: ListTile(
-              //     leading: Icon(
-              //       Icons.facebook,
-              //       color: Colors.black,
-              //       size: 23,
-              //     ),
-              //     title: Text(
-              //       "Login with Facebook",
-              //       style: TextStyle(
-              //           fontSize: 21,
-              //           color: Colors.black,
-              //           fontWeight: FontWeight.w400,
-              //           letterSpacing: .5),
-              //     ),
-              //   ),
-              //   color: Colors.yellow[300],
-              //   shape: StadiumBorder(),
-              //   // textColor: Colors.white,
-              // ),
-              // SizedBox(
-              //   height: 22,
-              // ),
-              // MaterialButton(
-              //   onPressed: () {},
-              //   height: 55,
-              //   minWidth: 350,
-              //   child: ListTile(
-              //     leading: Icon(
-              //       Icons.apple,
-              //       color: Colors.black,
-              //     ),
-              //     title: Text(
-              //       "Login with Apple",
-              //       style: TextStyle(
-              //           fontSize: 21,
-              //           color: Colors.black,
-              //           fontWeight: FontWeight.w400,
-              //           letterSpacing: .5),
-              //     ),
-              //   ),
-              //   color: Colors.yellow[300],
-              //   shape: StadiumBorder(),
-              // ),
-              // SizedBox(
-              //   height: 22,
-              // ),
               RichText(
                   text: TextSpan(
                       style: TextStyle(color: Colors.white),
@@ -147,7 +97,7 @@ class LoginOptions extends StatelessWidget {
                             'Create Account',
                             style: TextStyle(
                                 fontStyle: FontStyle.italic,
-                                color: Colors.yellow[300],
+                                color: Color(0xfff5f378),
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: .3),

@@ -17,8 +17,8 @@ class LoginOrSignup extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'Welcome to\nsNote App',//nala oru google font add akenm
-              style: TextStyle(fontSize: 42),
+              'Welcome to\nsNote App', //nala oru google font add akenm
+              style: TextStyle(fontSize: 42, color: Color(0xffdcc1ff)),
             ),
             SizedBox(
               height: 350,
@@ -34,7 +34,7 @@ class LoginOrSignup extends StatelessWidget {
                 "Sign In",
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
-              color: Colors.yellow[300],
+              color: Color(0xfff5f378),
               shape: StadiumBorder(),
               textColor: Colors.white,
             ),
@@ -52,7 +52,7 @@ class LoginOrSignup extends StatelessWidget {
                 "Sign Up",
                 style: TextStyle(fontSize: 20, color: Colors.black),
               ),
-              color: Colors.yellow[300],
+              color: Color(0xfff5f378),
               shape: StadiumBorder(),
               textColor: Colors.white,
             ),
