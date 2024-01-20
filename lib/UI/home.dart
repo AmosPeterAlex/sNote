@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
+        toolbarHeight: 70,
         backgroundColor: Colors.black,
         title: ListTile(
           title: Text(
@@ -44,12 +44,13 @@ class HomePage extends StatelessWidget {
                                   alignment: Alignment.center,
                                   children: [
                                     Positioned(
-                                      top: 10,
-                                      right: 10,
-                                      child: Icon(
-                                        Icons.checklist_rounded,
+                                      top: 5,
+                                      right: 5,
+                                      child: IconButton(
+                                        icon: Icon(Icons.checklist_outlined),
                                         color: Colors.black,
-                                        size: 30,
+                                        iconSize: 27,
+                                        onPressed: () {},
                                       ),
                                     ),
                                     Positioned(
@@ -80,19 +81,22 @@ class HomePage extends StatelessWidget {
                     children: List.generate(
                         10,
                         (index) => InkWell(
-                              onTap: () {print("Nav add akenm");},
+                              onTap: () {
+                                print("Nav add akenm");
+                              },
                               child: Card(
                                   color: Color(0xffec704b),
                                   child: Stack(
                                     alignment: Alignment.center,
                                     children: [
                                       Positioned(
-                                        top: 10,
-                                        right: 10,
-                                        child: Icon(
-                                          Icons.checklist_rounded,
+                                        top: 5,
+                                        right: 5,
+                                        child: IconButton(
+                                          icon: Icon(Icons.checklist_outlined),
                                           color: Colors.black,
-                                          size: 30,
+                                          iconSize: 27,
+                                          onPressed: () {},
                                         ),
                                       ),
                                       Positioned(

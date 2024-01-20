@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class FavoritePage extends StatelessWidget {
-  const FavoritePage({super.key});
+  // const FavoritePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 80,
+        toolbarHeight: 70,
         backgroundColor: Colors.black,
         title: ListTile(
           title: Text(
@@ -41,12 +41,13 @@ class FavoritePage extends StatelessWidget {
                                     alignment: Alignment.center,
                                     children: [
                                       Positioned(
-                                        top: 10,
-                                        right: 10,
-                                        child: Icon(
-                                          Icons.checklist_rounded,
+                                        top: 5,
+                                        right: 5,
+                                        child: IconButton(
+                                          icon: Icon(Icons.checklist_outlined),
                                           color: Colors.black,
-                                          size: 30,
+                                          iconSize: 27,
+                                          onPressed: () {},
                                         ),
                                       ),
                                       Positioned(
