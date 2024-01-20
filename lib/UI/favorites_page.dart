@@ -6,13 +6,14 @@ class FavoritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         toolbarHeight: 70,
         backgroundColor: Colors.black,
         title: ListTile(
           title: Text(
             'Hello, Amos',
-            style: TextStyle(color: Color(0xffdcc1ff), fontSize: 30),
+            style: TextStyle(color: Color(0xffec704b), fontSize: 30),
           ),
         ),
       ),
@@ -23,7 +24,10 @@ class FavoritePage extends StatelessWidget {
             ListTile(
               title: Text(
                 'Favorites',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xffec704b)),
               ),
               subtitle: SizedBox(
                   height: 650,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_app1/UI/bottom_nav.dart';
 import 'package:project_app1/UI/create_acc.dart';
 
 class LoginPage extends StatelessWidget {
@@ -7,6 +8,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -18,7 +20,10 @@ class LoginPage extends StatelessWidget {
               ),
               Text(
                 ' Hello\nAgain!',
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xffdcc1ff)),
               ),
               SizedBox(
                 height: 130,
@@ -64,7 +69,10 @@ class LoginPage extends StatelessWidget {
                 height: 22,
               ),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => BottomNavPage()));
+                },
                 height: 50,
                 minWidth: 350,
                 child: Text(

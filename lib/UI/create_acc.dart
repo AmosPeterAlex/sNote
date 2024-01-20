@@ -5,6 +5,7 @@ class CreateAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -16,7 +17,10 @@ class CreateAccount extends StatelessWidget {
               ),
               Text(
                 'Create\nAccount',
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xffdcc1ff)),
               ),
               SizedBox(
                 height: 50,

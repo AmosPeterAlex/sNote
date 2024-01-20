@@ -3,11 +3,12 @@ import 'package:project_app1/UI/create_acc.dart';
 import 'package:project_app1/UI/login_options.dart';
 
 class LoginOrSignup extends StatelessWidget {
-  const LoginOrSignup({super.key});
+  // const LoginOrSignup({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(

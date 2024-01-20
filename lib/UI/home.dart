@@ -6,6 +6,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         toolbarHeight: 70,
         backgroundColor: Colors.black,
@@ -22,7 +23,10 @@ class HomePage extends StatelessWidget {
             ListTile(
               title: Text(
                 "Recent Books",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xffec704b)),
               ),
               subtitle: SizedBox(
                 width: double.infinity,
@@ -60,7 +64,7 @@ class HomePage extends StatelessWidget {
                                           fontWeight: FontWeight.w500,
                                           letterSpacing: .6,
                                           fontSize: 21,
-                                          color: Color(0xffec704b)),
+                                          color: Colors.black),
                                     ))
                                   ],
                                 )),
@@ -71,7 +75,10 @@ class HomePage extends StatelessWidget {
             ListTile(
               title: Text(
                 'My NoteBooks',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xffdcc1ff)),
               ),
               subtitle: SizedBox(
                   height: 360,

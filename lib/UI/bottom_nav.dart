@@ -63,6 +63,19 @@ class _BottomNavPage extends State<BottomNavPage> {
         // type: BottomNavigationBarType.shifting,
       ),
       body: screen[index],
+      floatingActionButton: FloatingActionButton.extended(
+        tooltip: 'Create New Note',
+        onPressed: () {},
+        label: Row(
+          children: [
+            Icon(Icons.edit),
+            Text(
+              'Add new note',
+              style: TextStyle(fontSize: 16),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

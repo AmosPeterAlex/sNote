@@ -6,6 +6,7 @@ class SharedNotePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         toolbarHeight: 70,
         backgroundColor: Colors.black,
@@ -23,7 +24,10 @@ class SharedNotePage extends StatelessWidget {
             ListTile(
               title: Text(
                 'Shared Notes',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xffdcc1ff)),
               ),
               subtitle: Container(
                   height: 650,

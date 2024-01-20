@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_app1/UI/bottom_nav.dart';
 
+import 'login_or_signup.dart';
+
 void main() {
   runApp(MaterialApp(
     title: 'sNote App',
@@ -13,7 +15,7 @@ void main() {
     //     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
     //     useMaterial3: true),
     // theme: ThemeData.dark(),
-    home: BottomNavPage(),
+    home: LoginOrSignup(),
     debugShowCheckedModeBanner: false,
   ));
 }
