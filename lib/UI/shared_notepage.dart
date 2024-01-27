@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SharedNotePage extends StatelessWidget {
-  const SharedNotePage({super.key});
+  // const SharedNotePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +11,11 @@ class SharedNotePage extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 70,
         backgroundColor: Colors.black,
-        title: ListTile(
-          title: Text(
-            'Hello, Amos',
-            style: TextStyle(color: Color(0xffdcc1ff), fontSize: 30),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Hello, Amos',
+          style: GoogleFonts.lato(fontSize: 30, color: Color(0xffdcc1ff)),
+          // style: TextStyle(color: Color(0xffdcc1ff), fontSize: 30),
         ),
       ),
       body: SingleChildScrollView(
@@ -29,7 +30,7 @@ class SharedNotePage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     color: Color(0xffdcc1ff)),
               ),
-              subtitle: Container(
+              subtitle: SizedBox(
                   height: 650,
                   width: double.infinity,
                   child: GridView.extent(
@@ -48,7 +49,7 @@ class SharedNotePage extends StatelessWidget {
                                         top: 5,
                                         right: 5,
                                         child: IconButton(
-                                          icon: Icon(Icons.checklist_outlined),
+                                          icon: Icon(Icons.favorite_border_outlined),
                                           color: Colors.black,
                                           iconSize: 27,
                                           onPressed: () {},

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_app1/UI/create_acc.dart';
 import 'package:project_app1/UI/login_email.dart';
 
@@ -18,13 +19,9 @@ class LoginOptions extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text(
-                'Log in\n  with', //google font req
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xffdcc1ff)),
-              ),
+              Text('Log in\n  with', //google font req
+                  style: GoogleFonts.cinzel(
+                      fontSize: 42, color: Color(0xffdcc1ff))),
               SizedBox(
                 height: 200,
               ),
@@ -35,23 +32,34 @@ class LoginOptions extends StatelessWidget {
                 },
                 height: 55,
                 minWidth: 350,
-                child: ListTile(
-                  leading: Icon(
-                    Icons.alternate_email_sharp,
-                    color: Colors.black,
-                    size: 20,
-                  ),
-                  title: Text(
-                    "Login with Email",
-                    style: TextStyle(
-                        fontSize: 21,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: .5),
-                  ),
-                ),
                 color: Colors.yellow[300],
                 shape: StadiumBorder(),
+                child: ListTile(
+                  // leading: Icon(
+                  //   Icons.alternate_email_sharp,
+                  //   color: Colors.black,
+                  //   size: 20,
+                  // ),
+                  title: Center(
+                    child: Text(
+                      "Login with Email",
+                      style: GoogleFonts.kalam(
+                        fontSize: 24,
+                        color: Colors.black,
+                      ),
+                      // style: TextStyle(
+                      //     fontSize: 21,
+                      //     color: Colors.black,
+                      //     fontWeight: FontWeight.w400,
+                      //     letterSpacing: .5),
+                    ),
+                  ),
+                  // trailing: Icon(
+                  //   Icons.alternate_email_sharp,
+                  //   color: Colors.black,
+                  //   size: 20,
+                  // ),
+                ),
                 // textColor: Colors.white,
               ),
               SizedBox(
@@ -61,23 +69,27 @@ class LoginOptions extends StatelessWidget {
                 onPressed: () {},
                 height: 55,
                 minWidth: 350,
-                child: ListTile(
-                  leading: Icon(
-                    Icons.g_mobiledata_rounded,
-                    color: Colors.black,
-                    size: 30,
-                  ),
-                  title: Text(
-                    "Login with Google",
-                    style: TextStyle(
-                        fontSize: 21,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: .5),
-                  ),
-                ),
                 color: Color(0xfff5f378),
                 shape: StadiumBorder(),
+                child: ListTile(
+                  // leading: Icon(
+                  //   Icons.g_mobiledata_rounded,
+                  //   color: Colors.black,
+                  //   size: 30,
+                  // ),
+                  title: Center(
+                    child: Text(
+                      "Login with Google",
+                      //miss padipikila thanne adi akki nokenm
+                      style: GoogleFonts.kalam(fontSize: 24, color: Colors.black),
+                      // style: TextStyle(
+                      //     fontSize: 21,
+                      //     color: Colors.black,
+                      //     fontWeight: FontWeight.w400,
+                      //     letterSpacing: .5),
+                    ),
+                  ),
+                ),
                 // textColor: Colors.white,
               ),
               SizedBox(
@@ -101,7 +113,7 @@ class LoginOptions extends StatelessWidget {
                             'Create Account',
                             style: TextStyle(
                                 fontStyle: FontStyle.italic,
-                                color: Color(0xfff5f378),
+                                color: Color(0xffdcc1ff),
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: .3),

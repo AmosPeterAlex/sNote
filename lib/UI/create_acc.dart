@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_app1/UI/login_options.dart';
 
 class CreateAccount extends StatelessWidget {
@@ -8,7 +9,7 @@ class CreateAccount extends StatelessWidget {
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(14.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -16,86 +17,82 @@ class CreateAccount extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                'Create\nAccount',
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w600,
+                '  Create\nAccount',
+                style: GoogleFonts.cinzel(
+                    fontSize: 42,
                     color: Color(0xffdcc1ff)),
+                // style: TextStyle(
+                //     fontSize: 40,
+                //     fontWeight: FontWeight.w600,
+                //     color: Color(0xffdcc1ff)),
               ),
               SizedBox(
                 height: 50,
               ),
-              // Text('Email'),
-              TextField(
-                decoration: InputDecoration(
-                    fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.person),
-                    prefixIconColor: Colors.black,
-                    filled: true,
-                    hintText: "Username",
-                    hintStyle: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: .4),
-                    // suffixIcon: Icon(Icons.remove_red_eye),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(35))),
+              ListTile(
+                title: Text(
+                  'Username',
+                  style:
+                      GoogleFonts.lato(fontSize: 22, color: Color(0xffdcc1ff)),
+                ),
+                subtitle: TextField(
+                  decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      filled: true,
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(35))),
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'Email',
+                  style:
+                      GoogleFonts.lato(fontSize: 22, color: Color(0xffdcc1ff)),
+                ),
+                subtitle: TextField(
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(35))),
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'Password',
+                  style:
+                      GoogleFonts.lato(fontSize: 22, color: Color(0xffdcc1ff)),
+                ),
+                subtitle: TextField(
+                  decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      filled: true,
+                      suffixIcon: Icon(Icons.remove_red_eye),
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(35))),
+                ),
               ),
               SizedBox(
-                height: 22,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.alternate_email_sharp),
-                    prefixIconColor: Colors.black,
-                    hintText: "Email",
-                    hintStyle: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: .4),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(35))),
-              ),
-              SizedBox(
-                height: 22,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.password),
-                    prefixIconColor: Colors.black,
-                    filled: true,
-                    hintText: "Password",
-                    hintStyle: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: .4),
-                    // suffixIcon: Icon(Icons.remove_red_eye),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(35))),
-              ),
-              SizedBox(
-                height: 22,
+                height: 18,
               ),
               MaterialButton(
                 onPressed: () {},
                 height: 50,
-                minWidth: 350,
+                minWidth: 280,
                 child: Text(
                   "Create Account",
-                  style: TextStyle(fontSize: 20, color: Colors.black),
+                  style: GoogleFonts.kalam(fontSize: 24,color: Colors.black),
+                  // style: TextStyle(fontSize: 20, color: Colors.black),
                 ),
-                color: Colors.yellow[300],
+                color: Color(0xfff5f378),
                 shape: StadiumBorder(),
                 textColor: Colors.white,
               ),
               SizedBox(
-                height: 12,
+                height: 18,
               ),
               RichText(
                   text: TextSpan(
@@ -115,7 +112,7 @@ class CreateAccount extends StatelessWidget {
                             'Log in',
                             style: TextStyle(
                                 fontStyle: FontStyle.italic,
-                                color: Colors.yellow[300],
+                                color: Color(0xfff5f378),
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: .3),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/UI/on%20clicked/new_subject.dart';
 
 class FavoritePage extends StatelessWidget {
   // const FavoritePage({super.key});
@@ -10,11 +12,11 @@ class FavoritePage extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 70,
         backgroundColor: Colors.black,
-        title: ListTile(
-          title: Text(
-            'Hello, Amos',
-            style: TextStyle(color: Color(0xffec704b), fontSize: 30),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Hello, Amos',
+          style: GoogleFonts.lato(fontSize: 30, color: Color(0xffdcc1ff)),
+          // style: TextStyle(color: Color(0xffdcc1ff), fontSize: 30),
         ),
       ),
       body: SingleChildScrollView(
@@ -38,7 +40,8 @@ class FavoritePage extends StatelessWidget {
                     children: List.generate(
                         10,
                         (index) => InkWell(
-                              onTap: () {},
+                              onTap: () {Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => NewSubjectPage()));},
                               child: Card(
                                   color: Color(0xffdcc1ff),
                                   child: Stack(
@@ -48,7 +51,7 @@ class FavoritePage extends StatelessWidget {
                                         top: 5,
                                         right: 5,
                                         child: IconButton(
-                                          icon: Icon(Icons.checklist_outlined),
+                                          icon: Icon(Icons.favorite),
                                           color: Colors.black,
                                           iconSize: 27,
                                           onPressed: () {},

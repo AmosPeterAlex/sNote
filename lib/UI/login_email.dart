@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project_app1/UI/bottom_nav.dart';
 import 'package:project_app1/UI/create_acc.dart';
 
@@ -11,7 +12,7 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(14.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -20,53 +21,53 @@ class LoginPage extends StatelessWidget {
               ),
               Text(
                 ' Hello\nAgain!',
-                style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xffdcc1ff)),
+                style: GoogleFonts.cinzel(
+                  fontSize: 42,
+                  color: Color(0xffdcc1ff),
+                ),
+                // style: TextStyle(
+                //     fontSize: 40,
+                //     fontWeight: FontWeight.w600,
+                //     color: Color(0xffdcc1ff)),
               ),
               SizedBox(
                 height: 130,
               ),
-              // Text('Email'),
-              TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.person),
-                    prefixIconColor: Colors.black,
-                    hintText: "Email or Username",
-                    hintStyle: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: .8),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(35))),
+              ListTile(
+                title: Text(
+                  ' Email',
+                  style:
+                      GoogleFonts.lato(fontSize: 22, color: Color(0xffdcc1ff)),
+                ),
+                subtitle: TextField(
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(35))),
+                ),
               ),
+
+              ListTile(
+                title: Text(
+                  'Password',
+                  style:
+                      GoogleFonts.lato(fontSize: 22, color: Color(0xffdcc1ff)),
+                ),
+                subtitle: TextField(
+                  decoration: InputDecoration(
+                      fillColor: Colors.white,
+                      filled: true,
+                      suffixIcon: Icon(Icons.remove_red_eye),
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(35))),
+                ),
+              ),
+
               SizedBox(
-                height: 22,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    fillColor: Colors.white,
-                    prefixIcon: Icon(Icons.lock),
-                    prefixIconColor: Colors.black,
-                    filled: true,
-                    hintText: "Password",
-                    hintStyle: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w400,
-                        letterSpacing: .8,
-                        fontSize: 18),
-                    suffixIcon: Icon(Icons.remove_red_eye),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(35))),
-              ),
-              SizedBox(
-                height: 22,
+                height: 18,
               ),
               MaterialButton(
                 onPressed: () {
@@ -74,17 +75,17 @@ class LoginPage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => BottomNavPage()));
                 },
                 height: 50,
-                minWidth: 350,
+                minWidth: 200,
                 child: Text(
                   "Log In",
-                  style: TextStyle(fontSize: 20, color: Colors.black),
+                  style: GoogleFonts.kalam(fontSize: 24, color: Colors.black),
                 ),
                 color: Color(0xfff5f378),
                 shape: StadiumBorder(),
                 textColor: Colors.white,
               ),
               SizedBox(
-                height: 22,
+                height: 18,
               ),
               RichText(
                   text: TextSpan(
@@ -104,7 +105,7 @@ class LoginPage extends StatelessWidget {
                             'Create Account',
                             style: TextStyle(
                                 fontStyle: FontStyle.italic,
-                                color: Colors.yellow[300],
+                                color: Color(0xffdcc1ff),
                                 fontSize: 16,
                                 fontWeight: FontWeight.w500,
                                 letterSpacing: .3),
@@ -112,21 +113,24 @@ class LoginPage extends StatelessWidget {
                         )),
                   ])),
               SizedBox(
-                height: 270,
+                height: 100,
               ),
-
-              SizedBox(
-                height: 10,
+              Text(
+                'Forgot Password?',
+                style: GoogleFonts.lato(color: Colors.white, fontSize: 16),
               ),
-              Text('Forgot Password?'),
               InkWell(
                 child: Text(
                   "Reset",
                   style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.yellow[300],
-                      letterSpacing: .4),
+                      fontSize: 16,
+                      color: Color(0xffdcc1ff),
+                      fontStyle: FontStyle.italic),
+                  // style: TextStyle(
+                  //     fontSize: 15,
+                  //     fontWeight: FontWeight.w600,
+                  //     color: Colors.yellow[300],
+                  //     letterSpacing: .4),
                 ),
                 onTap: () {},
               )

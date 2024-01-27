@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/UI/on%20clicked/new_subject.dart';
 
 class HomePage extends StatelessWidget {
   // const HomePage({super.key});
@@ -10,11 +12,11 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 70,
         backgroundColor: Colors.black,
-        title: ListTile(
-          title: Text(
-            'Hello, Amos',
-            style: TextStyle(color: Color(0xffdcc1ff), fontSize: 30),
-          ),
+        centerTitle: true,
+        title: Text(
+          'Hello, Amos',
+          style: GoogleFonts.lato(fontSize: 30, color: Color(0xffdcc1ff)),
+          // style: TextStyle(color: Color(0xffdcc1ff), fontSize: 30),
         ),
       ),
       body: SingleChildScrollView(
@@ -26,7 +28,7 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xffec704b)),
+                    color: Color(0xffdcc1ff)),
               ),
               subtitle: SizedBox(
                 width: double.infinity,
@@ -40,10 +42,11 @@ class HomePage extends StatelessWidget {
                       6,
                       (index) => InkWell(
                             onTap: () {
-                              print('Card clicked');
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => NewSubjectPage()));
                             },
                             child: Card(
-                                color: Color(0xffdcc1ff),
+                                color: Color(0xfff5f378),
                                 child: Stack(
                                   alignment: Alignment.center,
                                   children: [
@@ -51,7 +54,8 @@ class HomePage extends StatelessWidget {
                                       top: 5,
                                       right: 5,
                                       child: IconButton(
-                                        icon: Icon(Icons.checklist_outlined),
+                                        icon: Icon(
+                                            Icons.favorite_border_outlined),
                                         color: Colors.black,
                                         iconSize: 27,
                                         onPressed: () {},
@@ -89,7 +93,8 @@ class HomePage extends StatelessWidget {
                         10,
                         (index) => InkWell(
                               onTap: () {
-                                print("Nav add akenm");
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => NewSubjectPage()));
                               },
                               child: Card(
                                   color: Color(0xffec704b),
@@ -100,7 +105,8 @@ class HomePage extends StatelessWidget {
                                         top: 5,
                                         right: 5,
                                         child: IconButton(
-                                          icon: Icon(Icons.checklist_outlined),
+                                          icon: Icon(
+                                              Icons.favorite_border_outlined),
                                           color: Colors.black,
                                           iconSize: 27,
                                           onPressed: () {},
@@ -119,6 +125,19 @@ class HomePage extends StatelessWidget {
                                   )),
                             )),
                   )),
+            )
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        tooltip: 'Create New Note',
+        onPressed: () {},
+        label: Row(
+          children: [
+            Icon(Icons.edit),
+            Text(
+              'New Note',
+              style: TextStyle(fontSize: 16),
             )
           ],
         ),
