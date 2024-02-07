@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_app1/UI/on%20clicked/new_subject.dart';
+
+import 'package:project_app1/UI/screens/home/on%20clicked/new_subject.dart';
 
 class FavoritePage extends StatelessWidget {
   // const FavoritePage({super.key});
@@ -64,7 +65,7 @@ class FavoritePage extends StatelessWidget {
                                             fontWeight: FontWeight.w500,
                                             letterSpacing: .6,
                                             fontSize: 21,
-                                            color: Color(0xffec704b)),
+                                            color: Colors.black),
                                       ))
                                     ],
                                   )),

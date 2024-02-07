@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_app1/UI/favorites_page.dart';
-import 'package:project_app1/UI/home.dart';
-import 'package:project_app1/UI/shared_notepage.dart';
+import 'package:project_app1/UI/screens/home/favorites_page.dart';
+import 'package:project_app1/UI/screens/home/home.dart';
+import 'package:project_app1/UI/screens/home/shared_notepage.dart';
 
 class BottomNavPage extends StatefulWidget {
   @override

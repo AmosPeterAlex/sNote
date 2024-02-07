@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_app1/UI/on%20clicked/new_subject.dart';
+import 'package:project_app1/UI/screens/home/on%20clicked/new_note.dart';
+import 'package:project_app1/UI/screens/home/on%20clicked/new_subject.dart';
+
 
 class HomePage extends StatelessWidget {
   // const HomePage({super.key});
@@ -20,6 +22,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
         child: Column(
           children: [
             ListTile(
@@ -87,6 +90,7 @@ class HomePage extends StatelessWidget {
               subtitle: SizedBox(
                   height: 360,
                   child: GridView.extent(
+                    physics: BouncingScrollPhysics(),
                     maxCrossAxisExtent: double.infinity,
                     childAspectRatio: 2,
                     children: List.generate(
@@ -131,7 +135,10 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         tooltip: 'Create New Note',
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => NewNotes()));
+        },
         label: Row(
           children: [
             Icon(Icons.edit),

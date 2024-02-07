@@ -62,7 +62,7 @@ class SharedNotePage extends StatelessWidget {
                                             fontWeight: FontWeight.w500,
                                             letterSpacing: .6,
                                             fontSize: 21,
-                                            color: Color(0xffdcc1ff)),
+                                            color: Colors.black),
                                       ))
                                     ],
                                   )),

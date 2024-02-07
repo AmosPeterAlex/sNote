@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_app1/UI/on%20clicked/new_widget.dart';
+import 'package:project_app1/UI/screens/home/on%20clicked/new_widget.dart';
 
 class NewSubjectPage extends StatelessWidget {
   // const NewSubjectPage({super.key});

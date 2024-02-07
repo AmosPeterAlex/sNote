@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:project_app1/UI/create_acc.dart';
-import 'package:project_app1/UI/login_options.dart';
+import 'package:project_app1/UI/screens/login/create_acc.dart';
+import 'package:project_app1/UI/screens/login/login_options.dart';
+import 'package:project_app1/UI/utils/my_colors.dart';
 
 class LoginOrSignup extends StatelessWidget {
   // const LoginOrSignup({super.key});
@@ -21,44 +23,45 @@ class LoginOrSignup extends StatelessWidget {
             ),
             Text('Welcome to\n  sNote App',
                 style: GoogleFonts.cinzel(
-                  //nala oru font kity ila
-                  fontSize: 40,
-                  color: Color(0xffdcc1ff),
-                )),
+                    //nala oru font kity ila
+                    fontSize: 40,
+                    color: myLavender)),
             SizedBox(
               height: 350,
             ),
             MaterialButton(
               onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => LoginOptions()));
+                Get.to(() => LoginOptions());
               },
               height: 50,
               minWidth: 350,
-              color: Color(0xfff5f378),
+              color: myYellow,
               shape: StadiumBorder(),
               textColor: Colors.white,
               child: Text("Log In",
-                  style: GoogleFonts.kalam(
-                      fontSize: 24, color: Colors.black)),
+                  style: GoogleFonts.kalam(fontSize: 24, color: Colors.black)),
             ),
             SizedBox(
               height: 22,
             ),
             MaterialButton(
               onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => CreateAccount()));
+                Get.to(
+                  () => CreateAccount(),
+                );
               },
               height: 50,
               minWidth: 350,
-              child: Text("Create Account",
-                  style: GoogleFonts.kalam(
-                      fontSize: 24, color: Colors.black)),
-              color: Color(0xfff5f378),
+              child: Text(
+                "Create Account",
+                style: GoogleFonts.kalam(fontSize: 24, color: Colors.black),
+              ),
+              color: myLavender,
               shape: StadiumBorder(),
               textColor: Colors.white,
             ),
+
+            ///Material button refractor cheyanm
           ],
         ),
       ),
