@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project_app1/UI/screens/home/favorites_page.dart';
 import 'package:project_app1/UI/screens/home/home.dart';
 import 'package:project_app1/UI/screens/home/shared_notepage.dart';
+import 'package:project_app1/UI/utils/my_colors.dart';
 
 class BottomNavPage extends StatefulWidget {
   @override
@@ -10,36 +12,26 @@ class BottomNavPage extends StatefulWidget {
 
 class _BottomNavPage extends State<BottomNavPage> {
   int index = 0;
-  var screen = [
-    HomePage(),
-    FavoritePage(), //favorite page
-    SharedNotePage() //shared note page
-  ];
+  var screen = [HomePage(), FavoritePage(), SharedNotePage()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
+            icon: FaIcon(FontAwesomeIcons.houseCrack),
+            activeIcon: FaIcon(FontAwesomeIcons.house),
             label: "Home",
           ),
           BottomNavigationBarItem(
-              activeIcon: Icon(
-                Icons.favorite,
-              ),
-              icon: Icon(Icons.favorite_border_outlined,
-                  color: Color(0xffdcc1ff)),
+              icon: FaIcon(FontAwesomeIcons.heartCrack),
+              activeIcon: FaIcon(FontAwesomeIcons.heartPulse),
               label: "Favorites"),
           BottomNavigationBarItem(
-              activeIcon: Icon(
-                Icons.menu_book_rounded,
-              ),
-              icon: Icon(Icons.menu_book_rounded, color: Color(0xffdcc1ff)),
+              activeIcon: FaIcon(FontAwesomeIcons.bookOpenReader),
+              icon: FaIcon(FontAwesomeIcons.bookOpen),
               label: 'Shared Notes'),
         ],
         onTap: (tapIndex) {
@@ -52,15 +44,14 @@ class _BottomNavPage extends State<BottomNavPage> {
         selectedFontSize: 12,
         // selectedItemColor: Color(0xffdcc1ff),
         selectedIconTheme: IconThemeData(
-          color: Color(0xfff5f378),
-          size: 30,
+          color: myYellow,
+          size: 28,
         ),
         unselectedFontSize: 16,
-        unselectedItemColor: Color(0xffdcc1ff),
+        unselectedItemColor: myLavender,
         showUnselectedLabels: true,
         backgroundColor: Colors.black,
-        iconSize: 24,
-        // type: BottomNavigationBarType.shifting,
+        iconSize: 20,
       ),
       body: screen[index],
     );

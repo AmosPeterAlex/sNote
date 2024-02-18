@@ -5,8 +5,14 @@ import 'package:project_app1/UI/screens/home/bottom_nav.dart';
 import 'package:project_app1/UI/screens/login/create_acc.dart';
 import 'package:project_app1/UI/utils/my_colors.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   // const LoginPage({super.key});
+  bool showPass = true;
 
   @override
   Widget build(BuildContext context) {
@@ -61,10 +67,26 @@ class LoginPage extends StatelessWidget {
                       letterSpacing: 1.7),
                 ),
                 subtitle: TextField(
+                  obscuringCharacter: '*',
+                  obscureText: showPass,
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
-                    // suffixIcon: Icon(Icons.remove_red_eye),
+                    //getx controller il ini kodukenm
+                    suffixIcon: IconButton(
+                      icon: Icon(showPass == true
+                          ? Icons.visibility_off_sharp
+                          : Icons.visibility),
+                      onPressed: () {
+                        setState(() {
+                          if (showPass == true) {
+                            showPass = false;
+                          } else {
+                            showPass = true;
+                          }
+                        });
+                      },
+                    ),
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(35),

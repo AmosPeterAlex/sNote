@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/UI/screens/home/bottom_nav.dart';
 import 'package:project_app1/UI/screens/home/home.dart';
 import 'package:project_app1/UI/screens/login/login_options.dart';
 import 'package:project_app1/UI/utils/my_colors.dart';
 
-class CreateAccount extends StatelessWidget {
+class CreateAccount extends StatefulWidget {
+  @override
+  State<CreateAccount> createState() => _CreateAccountState();
+}
+
+class _CreateAccountState extends State<CreateAccount> {
+  bool showPass = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +37,11 @@ class CreateAccount extends StatelessWidget {
               ListTile(
                 title: Text(
                   'Username',
-                  style: GoogleFonts.asapCondensed(fontSize: 22, color: myLavender,fontWeight: FontWeight.w400,letterSpacing: 1.5),
+                  style: GoogleFonts.asapCondensed(
+                      fontSize: 22,
+                      color: myLavender,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 1.5),
                 ),
                 subtitle: TextField(
                   decoration: InputDecoration(
@@ -45,7 +57,11 @@ class CreateAccount extends StatelessWidget {
               ListTile(
                 title: Text(
                   'Email',
-                  style: GoogleFonts.asapCondensed(fontSize: 22, color: myLavender,fontWeight: FontWeight.w400,letterSpacing: 1.5),
+                  style: GoogleFonts.asapCondensed(
+                      fontSize: 22,
+                      color: myLavender,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 1.5),
                 ),
                 subtitle: TextField(
                   decoration: InputDecoration(
@@ -61,13 +77,32 @@ class CreateAccount extends StatelessWidget {
               ListTile(
                 title: Text(
                   'Password',
-                  style: GoogleFonts.asapCondensed(fontSize: 22, color: myLavender,fontWeight: FontWeight.w400,letterSpacing: 1.5),
+                  style: GoogleFonts.asapCondensed(
+                      fontSize: 22,
+                      color: myLavender,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 1.5),
                 ),
                 subtitle: TextField(
+                  obscureText: showPass,
+                  obscuringCharacter: '*',
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
-                    suffixIcon: Icon(Icons.remove_red_eye),
+                    suffixIcon: IconButton(
+                      icon: Icon(showPass == true
+                          ? Icons.visibility_off_sharp
+                          : Icons.visibility),
+                      onPressed: () {
+                        setState(() {
+                          if (showPass == true) {
+                            showPass = false;
+                          } else {
+                            showPass = true;
+                          }
+                        });
+                      },
+                    ),
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(35),
@@ -80,7 +115,7 @@ class CreateAccount extends StatelessWidget {
               ),
               MaterialButton(
                 onPressed: () {
-                  Get.to(() => HomePage());
+                  Get.to(() => BottomNavPage());
                 },
                 height: 50,
                 minWidth: 280,

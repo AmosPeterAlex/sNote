@@ -11,7 +11,7 @@ class LoginOrSignup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       //dark theme anusarich ini change akenm
       body: Padding(
         padding: const EdgeInsets.all(20.0),
